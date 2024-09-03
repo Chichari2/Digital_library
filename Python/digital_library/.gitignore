@@ -168,7 +168,111 @@ cython_debug/
 
 .localized
 
-# Игнорировать папки
-/HTML + CSS/
-/Фотосессия /
+# Ignore the virtual environment
+.venv/
 
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore the SQLite database
+data/library.sqlite
+
+# Ignore IDE configuration files
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Ignore PDF files (if not needed in the repo)
+*.pdf
+
+# Ignore image files (if not needed in the repo)
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Ignore other non-code files or directories
+# Ignore the virtual environment
+.venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore SQLite database
+data/library.sqlite
+
+# Ignore IDE configuration files
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Ignore PDF files
+*.pdf
+
+# Ignore image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Ignore other non-code files or directories
+HTML + CSS/
+API_with_flask/
+Best_Buy/
+Calculator.py/
+Flask_project/
+Git/
+Movie project/
+OOP test/
+ORM/
+POLL-O-RAMA/
+POLLORAMA/
+Prognoz Bot/.idea/
+Rock, Paper, Scissors/
+SQL/
+Zootopia/
+blog_app/
+drink_bot/
+moviweb_app/
+my_flask_app/
+pythonGitProject/
+pythonProject/
+pythonProject1/
+pythonProject2/
+pythonProject3/
+pythonTestGit.py/
+Swift Game Development.pdf
+Topt/
+cat.png
+für Arbeit/
+textbook.sqlite3
+Мики рисунки/
+Резюме Вологдин А.М..pdf
+Снимок экрана 2024-08-09 в 13.06.13.png
+Снимок экрана 2024-08-09 в 13.06.22.png
+Снимок экрана 2024-08-26 в 13.02.49.png
+Снимок экрана 2024-08-26 в 13.04.16.png
+Снимок экрана 2024-08-26 в 13.04.53.png
+Фотосессия /
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
