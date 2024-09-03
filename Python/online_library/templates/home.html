@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+</head>
+<body>
+    <h1>Library Home</h1>
+
+    <!-- Search Form -->
+    <form action="{{ url_for('home') }}" method="get">
+        <input type="text" name="search_query" value="{{ search_query }}" placeholder="Search books">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Sorting Dropdown -->
+    <form action="{{ url_for('home') }}" method="get">
+        <select name="sort_by" onchange="this.form.submit()">
+            <option value="title" {% if sort_by == 'title' %}selected{% endif %}>Sort by Title</option>
+            <option value="author" {% if sort_by == 'author' %}selected{% endif %}>Sort by Author</option>
+            <option value="publication_year" {% if sort_by == 'publication_year' %}selected{% endif %}>Sort by Publication Year</option>
+        </select>
+        <input type="hidden" name="search_query" value="{{ search_query }}">
+    </form>
+
+    <!-- Books List -->
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> by {{ book.author.name }} ({{ book.publication_year }})
+                <form action="{{ url_for('delete_book', book_id=book.id) }}" method="post" style="display:inline;">
+                    <button type="submit">Delete Book</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% if not books %}
+        <p>No books found.</p>
+    {% endif %}
+
+    <a href="{{ url_for('add_book') }}">Add a new book</a>
+    <a href="{{ url_for('add_author') }}">Add a new author</a>
+</body>
+</html>
